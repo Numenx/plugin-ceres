@@ -12448,7 +12448,7 @@ body > #vue-error .wrapper-right {
   overflow: hidden;
   background-color: white;
   transform: translateX(0);
-  transition: width 310ms 0ms, transform 300ms ease-in-out;
+  transition: width 310ms 0ms, transform 300ms ease-in-out;
 }
 
 body > #vue-app .wrapper-right .wrapper-inner,
@@ -12495,7 +12495,7 @@ body > #vue-app.open-right .wrapper-right,
 body > #vue-error.open-right .wrapper-right {
   width: 100vw;
   transform: translateX(-100%);
-  transition: width 0ms, transform 300ms 10ms ease-in-out;
+  transition: width 0ms, transform 300ms 10ms ease-in-out;
 }
 
 @media (max-width: 543px) {
@@ -13450,7 +13450,7 @@ Custom classes
   z-index: 1080;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  transition: opacity 300ms, width 0ms 310ms, height 0ms 310ms;
+  transition: opacity 300ms, width 0ms 310ms, height 0ms 310ms;
 }
 
 .cmp::after {
@@ -13476,13 +13476,13 @@ Custom classes
   width: 100%;
   height: 100%;
   opacity: 1;
-  transition: width 0ms, height 0ms, opacity 300ms 10ms;
+  transition: width 0ms, height 0ms, opacity 300ms 10ms;
 }
 
 .cmp.wait::after {
   opacity: 1;
   visibility: visible;
-  transition: visibility 0ms, opacity 300ms 100ms;
+  transition: visibility 0ms, opacity 300ms 100ms;
 }
 
 .cmp-accordion .accordion-control {
