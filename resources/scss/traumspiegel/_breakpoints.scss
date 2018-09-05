@@ -1,3 +1,19 @@
-.test {}
-
- 
+@include media-breakpoint-up(xl) {
+  .brand-wrapper {
+    position: relative;
+    top: inherit;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 159px;
+    padding: 15px;
+    transform: none;
+}
+.navbar-brand img {
+    max-height: inherit;
+}
+#mainNavbarCollapsable ul.mainmenu > li > a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+}

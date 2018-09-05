@@ -1,0 +1,112 @@
+
+/* Material Design Box Shadows */
+
+@mixin shadow($level: 1) {
+    @if $level==1 {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+    @else if $level==2 {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    @else if $level==3 {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    @else if $level==4 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    @else if $level==5 {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+}
+
+/* Transitions */
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+      @content;
+  }
+
+  @keyframes #{$animation_name} {
+      @content;
+  }
+}
+
+@mixin keyframeanimation ($animation: zoom-in-out, $duration: 60s, $fillmode: both, $delay: 0) {
+-webkit-animation-delay: $delay;
+-webkit-animation-duration: $duration;
+-webkit-animation-name: $animation;
+-webkit-animation-fill-mode: $fillmode ;
+
+-moz-animation-delay: $delay;
+-moz-animation-duration: $duration;
+-moz-animation-name: $animation;
+-moz-animation-fill-mode: $fillmode;
+
+-o-animation-delay: $delay;
+-o-animation-duration: $duration;
+-o-animation-name: $animation;
+-o-animation-fill-mode: $fillmode;
+
+animation-delay: $delay;
+animation-duration: $duration;
+animation-name: $animation;
+animation-fill-mode: $fillmode;
+}
+
+@mixin transitionleft($time: .3s) {
+    transition: left $time;
+    -webkit-transition: left $time;
+    -moz-transition: left $time;
+    -o-transition: left $time;
+}
+
+@mixin transition-delay($time: .3s) {
+    -webkit-transition-delay: $time;
+    -moz-transition-delay: $time;
+    -o-transition-delay: $time;
+    transition-delay: $time;
+}
+
+@mixin slidetransition($delay) {
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@mixin slidetransitionout($delay) {
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+/* Dotted Border */
+@mixin dottedBorder($color: #8f8f8f, $orientation: horizontal, $position: top, $spacing: 5px, $size: 1px) {
+  background-position: $position;
+  @if $orientation == horizontal {
+    background-image: linear-gradient(to right, $color $size/$spacing * 100%, rgba(255,255,255,0) 0%);
+    background-size: $spacing $size;
+    background-repeat: repeat-x;
+  }
+  @else {
+    background-image: linear-gradient($color $size/$spacing * 100%, rgba(255,255,255,0) 0%);
+    background-size: $size $spacing;
+    background-repeat: repeat-y;
+  }
+  .ie9 & {
+    border-#{$position}:1px dotted $color;
+  }
+}

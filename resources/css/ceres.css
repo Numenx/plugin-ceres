@@ -20515,4 +20515,31 @@ body.menu-is-visible {
   background-color: #4D4F4D;
 }
 
+/* Material Design Box Shadows */
+/* Transitions */
+/* Dotted Border */
+nav.navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media (min-width: 1200px) {
+  .brand-wrapper {
+    position: relative;
+    top: inherit;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 159px;
+    padding: 15px;
+    transform: none;
+  }
+  .navbar-brand img {
+    max-height: inherit;
+  }
+  #mainNavbarCollapsable ul.mainmenu > li > a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=ceres.css.map */
