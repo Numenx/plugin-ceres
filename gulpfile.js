@@ -242,5 +242,5 @@ gulp.task("watch:js", ["build:vendor"], function()
 
 gulp.task("watch:sass", function()
 {
-    return gulp.watch(SCSS_SRC + "**/*.scss", ["build:sass"]);
+    return gulp.watch(SCSS_SRC + "**/*.scss", ["build:sass", "build:sass-min"]);
 });
